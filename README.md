@@ -14,4 +14,6 @@ rails db:seed to seed the data
 
 rails s to start the local server
 
+See Login Details at seeds.rb file
+
 Check comments for the seeded "Ruby on Rails Task" project.
