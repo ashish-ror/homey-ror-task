@@ -1,0 +1,21 @@
+<p><%= link_to "Back to projects", projects_path %></p>
+<h1><%= @project.name %></h1>
+<p>Status: <%= @project.status %></p>
+
+<h2>Comments</h2>
+<ul>
+  <% @comments.each do |comment| %>
+    <li><%= comment.content %></li>
+  <% end %>
+</ul>
+
+<%= form_for([@project, @comment]) do |form| %>
+  <p>
+    <%= form.hidden_field :user_id, value: @user.id %><br>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
